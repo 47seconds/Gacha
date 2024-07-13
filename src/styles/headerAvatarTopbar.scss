@@ -1,0 +1,9 @@
+.topbar {
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-50%);
+    
+    &.topbar-visible {
+      transform: translateY(0);
+    }
+  }
+  
