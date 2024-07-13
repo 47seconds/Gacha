@@ -34,9 +34,18 @@ export const userSlice = createSlice({
             state.user.watchHistory= [],
             state.isLogin = false
         },
+        userSignup: (state, action) => {
+            state.user.fullName= action.payload.fullName,
+            state.user.username= action.payload.username,
+            state.user.email= action.payload.email,
+            state.user.avatarUrl= action.payload.avatarUrl,
+            state.user.coverImageUrl= action.payload.coverImageUrl,
+            state.user.watchHistory= action.payload.watchHistory,
+            state.isLogin = true
+        }
     }
 });
 
-export const {userLogin, userLogout} = userSlice.actions;
+export const {userLogin, userLogout, userSignup} = userSlice.actions;
 
 export default userSlice.reducer;
