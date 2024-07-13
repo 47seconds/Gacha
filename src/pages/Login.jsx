@@ -21,15 +21,8 @@ function SignIn() {
     
     if(user.success) {
       const userData = user.data;
-      dispatch(userLogin({
-        fullName: userData.fullName,
-        username: userData.username,
-        email: userData.email,
-        avatarUrl: userData.avatarUrl,
-        coverImageUrl: userData.coverImageUrl,
-        watchHistory: userData.watchHistory,
-      }));
-      console.log('Login successfull');
+      dispatch(userLogin(userData));
+      console.log('Login successful');
       navigate('/home');
     } else {
       console.log('Login failed');
