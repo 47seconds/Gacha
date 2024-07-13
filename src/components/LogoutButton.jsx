@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import authService from '../service/auth.service'
 import { userLogout } from '../features/user/user.slice'
 
@@ -8,6 +8,7 @@ function LogoutButton() {
     const logoutHandler = () => {
         authService.userLogout()
         .then(dispach(userLogout()))
+        console.log('Logout successful')
     }
 
   return (
