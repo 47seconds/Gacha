@@ -5,9 +5,8 @@ import {Header, Footer} from './layouts'
 function App() {
     return (
     <div className="flex flex-col h-screen w-full">
-        {/* <TestForm/> */}
         <Header/>
-        <main className="flex-1 overflow-auto flex-grow mt-16">
+        <main className="flex-1 overflow-auto flex-grow mt-16 bg-gray-900">
             <Outlet/>
         </main>
         <Footer/>
