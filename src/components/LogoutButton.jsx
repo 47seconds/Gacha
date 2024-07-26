@@ -12,7 +12,7 @@ function LogoutButton() {
     }
 
   return (
-    <button className='rounded-2xl bg-blue-500 text-white p-2 text-xl font-medium' onClick={logoutHandler}>
+    <button onClick={logoutHandler}>
         Logout
     </button>
   )
