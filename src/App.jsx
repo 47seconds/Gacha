@@ -6,7 +6,7 @@ function App() {
     return (
     <div className="flex flex-col h-screen w-full">
         <Header/>
-        <main className="flex-1 overflow-auto flex-grow mt-16 bg-gray-900">
+        <main className="flex-1 overflow-auto flex-grow bg-gray-900">
             <Outlet/>
         </main>
         <Footer/>
