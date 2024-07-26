@@ -6,7 +6,7 @@ function ProfileAfterLogin() {
     // console.log(useSelector(state => state.userReducer.user.avatarUrl));
     
   return (
-    <img src={avatar} className="h-full p-2 rounded-full"/>
+    <img src={avatar} alt="user profile pic" className="w-12 h-12 rounded-full"/>
   )
 }
 
