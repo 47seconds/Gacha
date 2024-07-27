@@ -1,21 +1,27 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
-import authService from '../service/auth.service'
-import { userLogout } from '../features/user/user.slice'
+import React from "react";
+import { useDispatch } from "react-redux";
+import authService from "../service/auth.service";
+import { userLogout } from "../features/user/user.slice";
+import Cookies from "js-cookie";
 
-function LogoutButton() {
+function LogoutButton({toggleProfilebar}) {
     const dispach = useDispatch();
     const logoutHandler = () => {
-        authService.userLogout()
-        .then(dispach(userLogout()))
-        console.log('Logout successful')
-    }
+        authService.userLogout().then(dispach(userLogout()));
+        Cookies.remove("userData");
+        console.log("Logout successful");
+        toggleProfilebar()
+    };
 
-  return (
-    <button onClick={logoutHandler}>
-        Logout
-    </button>
-  )
+    return (
+        <button
+            type="button"
+            className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white text-left"
+            onClick={logoutHandler}
+        >
+            Log out
+        </button>
+    );
 }
 
-export default LogoutButton
+export default LogoutButton;
