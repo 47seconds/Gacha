@@ -46,7 +46,7 @@ export class AuthService {
         }
     }
 
-    userignup = async(userignupFormData) => {
+    userSignup = async(userignupFormData) => {
         try {
             const res = await axiosInstance.post('/user/register', userignupFormData, {
                 headers: {
