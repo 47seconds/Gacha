@@ -75,33 +75,6 @@ function Header() {
                                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                             </NavLink>
                         </li>
-                        <li>
-                            <NavLink
-                                to="/services"
-                                className="relative block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 group"
-                            >
-                                Services
-                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="/pricing"
-                                className="relative block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 group"
-                            >
-                                Pricing
-                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="/contact"
-                                className="relative block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 group"
-                            >
-                                Contact
-                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-                            </NavLink>
-                        </li>
                     </ul>
                 </div>
                 {authStatus && (
@@ -132,10 +105,10 @@ function Header() {
                                 </span>
                             </div>
                             <ul
-                                className="py-2"
+                                className="rounded-xl"
                                 aria-labelledby="user-menu-button"
                             >
-                                <li>
+                                {/* <li>
                                     <NavLink
                                         to="#"
                                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
@@ -150,7 +123,7 @@ function Header() {
                                     >
                                         Settings
                                     </NavLink>
-                                </li>
+                                </li> */}
                                 <li>
                                     <LogoutButton toggleProfilebar={handleToggleProfile}/>
                                 </li>
