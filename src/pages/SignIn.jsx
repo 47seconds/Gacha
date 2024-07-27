@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import authService from "../service/auth.service.js";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLogin } from "../features/user/user.slice.js";
+import Cookies from "js-cookie";
 
 function SignIn() {
     const [username, setUsername] = useState("");
@@ -22,6 +23,10 @@ function SignIn() {
         if (user.success) {
             const userData = user.data;
             dispatch(userLogin(userData));
+
+            // saving user data for 1 day in cookies
+            const expirationDate = new Date(Date.now() + ( 1 * 24 * 60 * 60 * 1000));
+            Cookies.set("userData", JSON.stringify(userData), {expires: expirationDate});
             console.log("Login successful");
             navigate("/home");
         } else {
@@ -42,3 +47,4 @@ function SignIn() {
 }
 
 export default SignIn;
+1
