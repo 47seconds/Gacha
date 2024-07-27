@@ -16,7 +16,7 @@ function LogoutButton({toggleProfilebar}) {
     return (
         <button
             type="button"
-            className="block w-full px-4 py-2 rounded-b-xl bg-red-500 text-blue-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white text-left"
+            className="block w-full px-4 py-2 rounded-b-xl bg-red-500 text-blue-700 hover:bg-gray-100 dark:hover:bg-red-700 dark:text-gray-200 dark:hover:text-white text-left"
             onClick={logoutHandler}
         >
             Log out
