@@ -1,1 +1,0 @@
-A Simple Video Streaming Platform
