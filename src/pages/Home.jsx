@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import {VideoPlayer} from '../components';
 import {useLatestShotties} from '../hooks/video';
+import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 
 function Home() {
