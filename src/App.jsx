@@ -9,7 +9,7 @@ function App() {
         <main className="flex-1 overflow-auto flex-grow bg-gray-900">
             <Outlet/>
         </main>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
     );
 }
