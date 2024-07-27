@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: gacha
+    name: Project-Gacha
     env: static
-    staticPublishPath: dist
+    staticPublishPath: /dist
     routes:
       - type: rewrite
         source: "/*"
