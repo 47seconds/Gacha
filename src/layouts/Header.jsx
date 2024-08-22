@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
-import { LogoutButton, ProfileAfterLogin, SideBar } from "../components";
+import { LogoutButton, ProfileAfterLogin, SideBar, UserSettings, UploadShottie } from "../components";
 import { useSelector, useDispatch } from "react-redux";
 import { userLogin } from "../features/user/user.slice.js";
 import Cookies from "js-cookie";
@@ -106,9 +106,9 @@ function Header() {
                                 className="rounded-xl"
                                 aria-labelledby="user-menu-button"
                             >
-                                <li>
-                                    <LogoutButton toggleProfilebar={handleToggleProfile}/>
-                                </li>
+                                <li><UploadShottie toggleProfilebar={handleToggleProfile}/></li>
+                                <li><UserSettings toggleProfilebar={handleToggleProfile}/></li>
+                                <li><LogoutButton toggleProfilebar={handleToggleProfile}/></li>
                             </ul>
                         </div>
                     </div>
